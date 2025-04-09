@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Website - Ek Sahyog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+
+    <style>
+
+
+/* .calendar-section {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+}
+
+#calendar {
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+table td, table th {
+    padding: 10px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+} */
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 15px 0;
+        }
+
+        header .logo {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #e74c3c;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        .hero {
+            background: url('IMG_8339.JPG') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            animation: fadeIn 2s ease-out forwards;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            animation: slideUp 1.5s ease-out forwards;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-top: 15px;
+            animation: slideUp 1.8s ease-out forwards;
+            animation-delay: 0.3s;
+        }
+
+        .btn-main {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .btn-main:hover {
+            background-color: #d63b2b;
+        }
+
+        .impact-section,
+        .projects-section {
+            padding: 50px 0;
+        }
+
+        .impact-card,
+        .project-card {
+            background-color: #fcfdff20;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .impact-card:hover,
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .impact-card h3,
+        .project-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .impact-card p,
+        .project-card p {
+            font-size: 16px;
+        }
+
+        /* Keyframes */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Project Section */
+        .projects {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .projects h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .project-card {
+            background-color: #fcfdff20;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .project-card h3 {
+            margin-top: 15px;
+            font-size: 24px;
+        }
+
+        .project-card p {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 50px 0;
+            background-color: #e74d3ced;
+            color: white;
+            text-align: center;
+        }
+
+        .testimonial {
+            margin: 20px;
+            font-size: 18px;
+            font-style: italic;
+            border-left: 3px solid white;
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        .testimonial h5 {
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Government Schemes Section */
+        .schemes-section {
+            padding: 50px 0;
+            background-color: #1a1a1a;
+            text-align: center;
+        }
+
+        .schemes-section h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .scheme-card {
+            background-color: #fcfdff20;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .scheme-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .scheme-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .scheme-card p {
+            font-size: 16px;
+        }
+
+        .scheme-button {
+            background-color: #e74c3c;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-size: 14px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .scheme-button:hover {
+            background-color: #d63b2b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="container d-flex justify-content-between align-items-center">
+            <div class="logo">Ek Sahyog</div>
+            <ul class="d-flex list-unstyled mb-0">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="member.html">Be a Member</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="help.html">Request Help</a></li>
+                <li><a href="government-policies.html">Government Policies</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1>Welcome to Ek Sahyog</h1>
+            <p>Making a difference, one step at a time.</p>
+            <a href="donate.html" class="btn-main">Donate Now</a>
+        </div>
+    </section>
+
+
+    <!-- Impact Section -->
+    <section class="impact-section">
+        <div class="container text-center">
+            <h2>Our Impact</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="impact-card">
+                        <h3>1000+ People Helped</h3>
+                        <p>We have assisted over 1000 individuals with healthcare, education, and more.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="impact-card">
+                        <h3>500+ Events Organized</h3>
+                        <p>From health camps to skill development workshops, we’ve organized over 500 events.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="impact-card">
+                        <h3>250+ Projects</h3>
+                        <p>Our various projects have transformed communities across the region.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="events" class="events-section">
+        <div class="container text-center">
+            <h2>Upcoming Events</h2>
+            <ul class="list-unstyled">
+                <li>December 12, 2024: Health Camp at XYZ Village</li>
+                <li>January 5, 2025: Women Empowerment Workshop</li>
+            </ul>
+        </div>
+    </section>
+     -->
+
+
+    <!-- Government Schemes Section -->
+    <section class="schemes-section">
+        <h2>Government Schemes for Empowerment</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="scheme-card">
+                        <h3>Pradhan Mantri Jan Dhan Yojana</h3>
+                        <p>A financial inclusion scheme that aims to ensure access to financial services to the unbanked population.</p>
+                        <a href="https://www.pmjdy.gov.in/" class="scheme-button" target="_blank">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="scheme-card">
+                        <h3>Swachh Bharat Abhiyan</h3>
+                        <p>Improving sanitation and cleanliness across India with a focus on hygiene and waste management.</p>
+                        <a href="https://swachhbharatmission.gov.in/" class="scheme-button" target="_blank">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="scheme-card">
+                        <h3>PMAY (Pradhan Mantri Awas Yojana)</h3>
+                        <p>Providing affordable housing for all by 2022, especially for the urban poor.</p>
+                        <a href="https://pmaymis.gov.in/" class="scheme-button" target="_blank">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What People Say</h2>
+        <div class="container">
+            <div class="testimonial">
+                <p>"Ek Sahyog's programs have made a huge impact in our community. We're truly grateful for their support."</p>
+                <h5>- Ishani Devi</h5>
+            </div>
+            <div class="testimonial">
+                <p>"Through Ek Sahyog, I've gained the skills I need to support my family and build a better future."</p>
+                <h5>- Hardik Chilana</h5>
+            </div>
+        </div>
+    </section>
+
+    <!-- FullCalendar Section -->
+<section class="calendar-section">
+    <h2>Upcoming Events</h2>
+    <div id="calendar"></div>
+</section>
+
+<script>
+    $(document).ready(function() {
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            },
+            events: [
+                {
+                    title: 'Event 1',
+                    start: '2024-11-23T10:30:00',
+                    end: '2024-11-23T12:30:00'
+                },
+                {
+                    title: 'Event 2',
+                    start: '2024-11-25T14:30:00',
+                    end: '2024-11-25T16:00:00'
+                }
+            ]
+        });
+    });
+</script>
+
+    
+
+    
+
+    <!-- <section id="social-media" class="social-media-section">
+        <div class="container text-center">
+            <h2>Follow Us</h2>
+            <p>Stay updated on our latest activities on social media.</p>
+            <a href="https://www.instagram.com/ek_sahyog" class="btn-main">Follow on Instagram</a>
+            <a href="https://www.facebook.com/ek_sahyog" class="btn-main">Follow on Facebook</a>
+        </div>
+    </section> -->
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Ek Sahyog. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

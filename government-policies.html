@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Policies - Ek Sahyog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 15px 0;
+        }
+
+        header .logo {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #e74c3c;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        .policy-list {
+            padding: 50px 0;
+        }
+
+        .policy-card {
+            background-color: #fcfdff20;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .policy-card h3 {
+            margin-top: 15px;
+            font-size: 26px;
+        }
+
+        .policy-card p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .policy-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .btn-learn-more {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .btn-learn-more:hover {
+            background-color: #d63b2b;
+        }
+
+        .modal-content {
+            background-color: #222222;
+            color: white;
+        }
+
+        .modal-header {
+            border-bottom: 1px solid #444;
+        }
+
+        .modal-footer {
+            border-top: 1px solid #444;
+        }
+
+        .modal-body h4 {
+            font-size: 20px;
+        }
+
+        .modal-body ul {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="container d-flex justify-content-between align-items-center">
+            <div class="logo">Ek Sahyog</div>
+            <ul class="d-flex list-unstyled mb-0">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="member.html">Be a Member</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="help.html">Request Help</a></li>
+                <li><a href="government-policies.html">Government Policies</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Government Policies Section -->
+    <section class="policy-list">
+        <div class="container">
+            <h2 class="text-center">Government Schemes for Welfare, Education, and Health</h2>
+            <div class="row">
+                <!-- Welfare Scheme 1 -->
+                <div class="col-md-4">
+                    <div class="policy-card">
+                        <img src="pradhan_mantri_jan_dhan_yojana.png" alt="Pradhan Mantri Jan Dhan Yojana">
+                        <h3>Pradhan Mantri Jan Dhan Yojana</h3>
+                        <p>Providing financial services to the underprivileged, ensuring access to a bank account and debit card.</p>
+                        <button class="btn-learn-more" data-bs-toggle="modal" data-bs-target="#janDhanModal">Learn More</button>
+                    </div>
+                </div>
+                <!-- Education Scheme -->
+                <div class="col-md-4">
+                    <div class="policy-card">
+                        <img src="RMSA.jpg" alt="Rashtriya Madhyamik Shiksha Abhiyan">
+                        <h3>Rashtriya Madhyamik Shiksha Abhiyan (RMSA)</h3>
+                        <p>This scheme improves access to secondary education in underserved areas.</p>
+                        <button class="btn-learn-more" data-bs-toggle="modal" data-bs-target="#rmsaModal">Learn More</button>
+                    </div>
+                </div>
+                <!-- Health Scheme -->
+                <div class="col-md-4">
+                    <div class="policy-card">
+                        <img src="ayushman.jpg" alt="Ayushman Bharat">
+                        <h3>Ayushman Bharat</h3>
+                        <p>The world's largest health insurance scheme to provide medical assistance to underserved communities.</p>
+                        <button class="btn-learn-more" data-bs-toggle="modal" data-bs-target="#ayushmanModal">Learn More</button>
+                    </div>
+                </div>
+                <!-- Additional Scheme 1: Swachh Bharat Abhiyan -->
+                <div class="col-md-4">
+                    <div class="policy-card">
+                        <img src="swacch.png" alt="Swachh Bharat Abhiyan">
+                        <h3>Swachh Bharat Abhiyan</h3>
+                        <p>Clean India mission aiming to eliminate open defecation and improve solid waste management.</p>
+                        <button class="btn-learn-more" data-bs-toggle="modal" data-bs-target="#swachhBharatModal">Learn More</button>
+                    </div>
+                </div>
+                <!-- Additional Scheme 2: Atal Pension Yojana -->
+                <div class="col-md-4">
+                    <div class="policy-card">
+                        <img src="atal_pension_yojana.jpeg" alt="Atal Pension Yojana">
+                        <h3>Atal Pension Yojana</h3>
+                        <p>A social security scheme for workers in the unorganized sector to secure their future.</p>
+                        <button class="btn-learn-more" data-bs-toggle="modal" data-bs-target="#atalPensionModal">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Pradhan Mantri Jan Dhan Yojana -->
+    <div class="modal fade" id="janDhanModal" tabindex="-1" aria-labelledby="janDhanModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="janDhanModalLabel">Pradhan Mantri Jan Dhan Yojana</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4>Pros</h4>
+                    <ul>
+                        <li>Financial inclusion for unbanked populations.</li>
+                        <li>Access to banking services for the poor.</li>
+                        <li>Helps in direct transfer of government benefits.</li>
+                    </ul>
+                    <h4>Cons</h4>
+                    <ul>
+                        <li>Some people still lack awareness about the scheme.</li>
+                        <li>Limited accessibility in remote areas.</li>
+                    </ul>
+                    <h4>Process</h4>
+                    <p>Visit a local bank branch with your Aadhaar card and other required documents to open an account under the scheme.</p>
+                    <h5>Official Website: <a href="https://pmjdy.gov.in" target="_blank">pmjdy.gov.in</a></h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Rashtriya Madhyamik Shiksha Abhiyan -->
+    <div class="modal fade" id="rmsaModal" tabindex="-1" aria-labelledby="rmsaModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="rmsaModalLabel">Rashtriya Madhyamik Shiksha Abhiyan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4>Pros</h4>
+                    <ul>
+                        <li>Improves access to secondary education.</li>
+                        <li>Focuses on marginalized areas and communities.</li>
+                        <li>Upgrades infrastructure in schools.</li>
+                    </ul>
+                    <h4>Cons</h4>
+                    <ul>
+                        <li>Implementation may face delays in remote areas.</li>
+                        <li>Limited reach in underdeveloped regions.</li>
+                    </ul>
+                    <h4>Process</h4>
+                    <p>Schools can apply through the state government's educational department for funding and implementation support.</p>
+                    <h5>Official Website: <a href="https://mhrd.gov.in/rmsa" target="_blank">mhrd.gov.in/rmsa</a></h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Ayushman Bharat -->
+    <div class="modal fade" id="ayushmanModal" tabindex="-1" aria-labelledby="ayushmanModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ayushmanModalLabel">Ayushman Bharat</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4>Pros</h4>
+                    <ul>
+                        <li>Provides free healthcare to economically weaker sections.</li>
+                        <li>World's largest health insurance scheme.</li>
+                        <li>Financial protection from catastrophic health expenses.</li>
+                    </ul>
+                    <h4>Cons</h4>
+                    <ul>
+                        <li>Eligibility criteria can be restrictive for some.</li>
+                        <li>Limited awareness in rural and remote areas.</li>
+                    </ul>
+                    <h4>Process</h4>
+                    <p>Eligible individuals can apply through the nearest empaneled hospital or online portal for registration.</p>
+                    <h5>Official Website: <a href="https://www.pmjay.gov.in" target="_blank">pmjay.gov.in</a></h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Swachh Bharat Abhiyan -->
+    <div class="modal fade" id="swachhBharatModal" tabindex="-1" aria-labelledby="swachhBharatModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="swachhBharatModalLabel">Swachh Bharat Abhiyan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4>Pros</h4>
+                    <ul>
+                        <li>Helps in reducing open defecation.</li>
+                        <li>Promotes cleanliness and sanitation.</li>
+                        <li>Improves public health conditions.</li>
+                    </ul>
+                    <h4>Cons</h4>
+                    <ul>
+                        <li>Implementation and compliance may be challenging in remote areas.</li>
+                        <li>Funds may not be effectively utilized in some regions.</li>
+                    </ul>
+                    <h4>Process</h4>
+                    <p>Citizens can join the movement and contribute to cleanliness drives in their local communities.</p>
+                    <h5>Official Website: <a href="https://swachhbharatmission.gov.in" target="_blank">swachhbharatmission.gov.in</a></h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Atal Pension Yojana -->
+    <div class="modal fade" id="atalPensionModal" tabindex="-1" aria-labelledby="atalPensionModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="atalPensionModalLabel">Atal Pension Yojana</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h4>Pros</h4>
+                    <ul>
+                        <li>Offers financial security after retirement for unorganized sector workers.</li>
+                        <li>Low premium rates.</li>
+                    </ul>
+                    <h4>Cons</h4>
+                    <ul>
+                        <li>Eligibility is limited to those in the unorganized sector.</li>
+                        <li>Funds are locked in for long-term investment.</li>
+                    </ul>
+                    <h4>Process</h4>
+                    <p>Eligible individuals can apply online or through participating banks and financial institutions.</p>
+                    <h5>Official Website: <a href="https://www.npscra.nsdl.co.in/atal-pension-yojana.php" target="_blank">npscra.nsdl.co.in</a></h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Ek Sahyog. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
